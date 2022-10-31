@@ -46,4 +46,5 @@ universal = true
 [tool.hatch.build.targets.sdist]
 exclude = [
   "/.github",
+  ".gitignore",
 ]
