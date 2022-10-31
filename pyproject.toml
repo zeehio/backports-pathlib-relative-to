@@ -1,0 +1,48 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "backports-pathlib-relative-to"
+version = "0.1.0"
+description = "Backports pathlib.Path().relative_to method from python 3.12"
+authors = [
+  { name = "Sergio Oller", email="sergioller@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["backports", "pathlib", "relative_to", "walk_up"]
+license = "PSF-2.0"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+"Source code" = "https://github.com/zeehio/backports-pathlib-relative-to"
+
+
+[tool.hatch.envs.test]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.7", "3.8", "3.9", "3.10", "3.11"]
+
+
+[envs.default.scripts]
+test = "python -m backports.pathlib._tests"
+
+
+[tool.hatch.build.targets.wheel]
+universal = true
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+]
