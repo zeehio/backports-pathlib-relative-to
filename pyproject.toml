@@ -9,6 +9,7 @@ version = "0.1.0"
 description = "Backports pathlib.Path().relative_to method from python 3.12"
 authors = [
   { name = "Sergio Oller", email="sergioller@gmail.com"},
+  { name = "Domenico Ragusa"}
 ]
 readme = "README.md"
 requires-python = ">=3.7"
