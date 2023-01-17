@@ -1,19 +1,19 @@
 # backports-pathlib-relative-to
 
-Backports the `relative_to` method with its `walk_up`
-argument from python 3.12 back to 3.7.
+Since:
 
-## Installation
+- There are several alternatives better positioned to maintain this functionality
+- This package has a very too narrow scope
+- This package has never left the beta state
+- There are no known users of this package
+- And to be honest, I don't have time to properly maintain this package
 
-```
-python -m pip install backports-pathlib-relative-to
-```
+I have decided to withdraw the package from pypi and archive this repository.
 
-## Usage
+Please refer to either:
 
-```python
-from backports.pathlib import pathlib
+- https://github.com/jazzband/pathlib2
+- https://github.com/bitranox/pathlib3x
 
-p = pathlib.Path("/a")
-p.relative_to("/c", walk_up=True)
-```
+For backports of the pathlib module.
+
